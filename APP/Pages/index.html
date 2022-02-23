@@ -1,0 +1,262 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>CSS3 Animation</title>
+	<link rel="stylesheet" type="text/css" href="../css/Bootstrap/bootstrap.css" />
+	<link rel="stylesheet" href="../css/Bootstrap/bootstrap-icons.css">
+	<style type="text/css">
+		* {
+			font-family: "microsoft yahei";
+		}
+
+		html {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			/* margin: 0 auto;
+			background: rgba(251, 251, 253, 1);
+			background-size: 100% 100%;
+			top: 0;
+			left: 0; */
+			user-select: none;
+		}
+
+		.LoginPage-Title {
+			display: block;
+			height: 300px;
+			line-height: 100px;
+			text-align: center;
+			font-size: 45px;
+			color: #323232;
+			transition: all 0.5s;
+		}
+
+		@keyframes hue {
+			0% {
+				filter: hue-rotate(0deg);
+			}
+
+			50% {
+				filter: hue-rotate(180deg);
+			}
+
+			100% {
+				filter: hue-rotate(360deg);
+			}
+		}
+
+		.BackgroundImg {
+			/* background: url("../video/A.mp4") no-repeat center0px; */
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			z-index: -100;
+		}
+
+		.body {
+			margin: 0 auto;
+			width: 470px;
+			height: 476px;
+			border-radius: 3.5%;
+			overflow: hidden;
+			background: rgba(255, 255, 255, 1);
+			-webkit-box-shadow: #DADBDC 0px 5px 15px;
+			-moz-box-shadow: #DADBDC 0px 5px 15px;
+			box-shadow: #DADBDC 0px 5px 15px;
+			transition: all 0.3s;
+		}
+
+		.body>div {
+			position: relative;
+			border-radius: 3.5%;
+			transition: all 0.3s;
+			float: left;
+			width: 100%;
+			height: 100%;
+			padding: 0 5% 5% 5%;
+		}
+
+		.Login-Title {
+			margin-top: 5%;
+			text-align: center;
+		}
+
+		.QrCode {
+			position: absolute;
+			top: 4.5%;
+			right: 5.2%;
+			width: 35px;
+			height: 35px;
+			cursor: pointer;
+			transition: all 0.25s;
+		}
+
+		.QrCode:hover {
+			color: #0D6EFD;
+		}
+
+		.FallBack {
+			position: absolute;
+			/* top: 4.5%;
+			right: 5.2%; */
+			width: 30px;
+			height: 30px;
+			top: 6.5%;
+			left: 5%;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+
+		.FallBack:hover {
+			color: #0D6EFD;
+		}
+
+		.InputForm input {
+			height: 56px;
+			font-size: 20px;
+		}
+
+		.InputForm label {
+			line-height: 24px;
+		}
+
+		.padding-30 {
+			padding-right: 30%;
+		}
+
+		.VerificationCode {
+			width: 110px;
+			height: 50px;
+			border: 1px solid #CED4DA;
+		}
+
+		.RemeberPassword {
+			cursor: pointer;
+			color: #6C6A69;
+			font-size: 15px;
+		}
+
+		.Register {
+			color: #6764D6;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		.Register:hover {
+			color: #6764D6;
+			text-decoration: underline;
+		}
+
+		.btn-submit {
+			width: 160px;
+			height: 48px;
+			font-size: 20px;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+
+		@media screen and (max-width:520px) {
+			.body {
+				margin: 0 auto;
+				width: 350px;
+				height: 430px;
+				border-radius: 3.5%;
+				overflow: hidden;
+				background: rgba(255, 255, 255, 1);
+				-webkit-box-shadow: #DADBDC 0px 5px 15px;
+				-moz-box-shadow: #DADBDC 0px 5px 15px;
+				box-shadow: #DADBDC 0px 5px 15px;
+				transition: all 0.5s;
+			}
+
+			.QrCode {
+				width: 20px;
+				height: 20px;
+				top: 5.5%;
+				right: 6%;
+			}
+
+			.QrCode:hover {
+				text-align: center;
+				color: #0D6EFD;
+			}
+
+			.LoginPage-Title {
+				display: block;
+				line-height: 300px;
+				text-align: center;
+				height: 300px;
+				font-size: 30px;
+				color: #323232;
+				transition: all 0.5s;
+			}
+		}
+	</style>
+</head>
+<body>
+	<video id="video" class="BackgroundImg" autoplay="autoplay" loop="loop" muted="muted" preload="auto">
+		<!-- <source src="../video/large.mp4" type="video/mp4"> -->
+	</video>
+	<div class="container-fluid">
+		<div class="row" style="border: 1px solid red;">
+			<div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
+				<label class="LoginPage-Title">Login</label>
+			</div>
+			<div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9">
+
+			</div>
+		</div>
+		<div class="row" style="border: 1px solid red;">
+			<div class="col-xxl-7 col-xl-6 col-lg-4">
+
+			</div>
+			<div class="col-xxl-5 col-xl-6 col-lg-8 col-md-12">
+				<div class="body" id="Body">
+					<!-- 账号密码登录 -->
+					<div id="LoginPage">
+						<h3 class="mb-3 Login-Title" id="Login-Title">UserLogin</h3>
+						<svg onclick="SwitchLoginType('二维码登录')" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+							class="bi bi-upc-scan QrCode" viewBox="0 0 16 16">
+							<path
+								d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+						</svg>
+						<div class="form-floating mb-3 InputForm">
+							<input type="text" class="form-control" id="UserName" placeholder=" ">
+							<label for="UserName">用户名</label>
+						</div>
+						<div class="form-floating mb-3 InputForm">
+							<input type="password" class="form-control" id="PassWord" placeholder=" ">
+							<label for="PassWord">密码</label>
+						</div>
+						<div class="form-floating mb-3">
+							<div class="input-group form-floating padding-30 InputForm">
+								<input id="VerificationCodeVal" type="text" style="height: 50px;" class="form-control"
+									id="PassWord" placeholder=" ">
+								<label for="VerificationCodeVal" style="line-height: 18px;z-index: 3;">验证码</label>
+								<canvas id="VerificationCode" class="btn btn-outline VerificationCode"
+									onclick="SwitchVerficationCode()"></canvas>
+							</div>
+						</div>
+						<div class="form-check mb-4">
+							<input type="checkbox" class="form-check-input" id="RemeberPassWord">
+							<label class="form-check-label RemeberPassword" for="RemeberPassWord">记住密码</label>
+							<a href="javascript:;" class="Register" style="float: right;"
+								onclick="SwitchLoginType(this.text)">忘记密码</a>
+						</div>
+						<button type="button" id="Login" class="btn btn-primary mb-4 btn-submit"
+							onclick="Login()">登录</button>
+						<div class="form-floating mb-4" style="text-align: center;">
+							<span style="font-size: 14px;color: #6C6A69;">没有账号? <a href="javascript:;"
+									class="Register">立即注册</a></span>
+							<a href="javascript:;" id="SMSVerficationClick" onclick="SwitchLoginType(this.text)"
+								class="Register" style="margin-left: 6%;">短信验证登录</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
