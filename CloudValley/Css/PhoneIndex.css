@@ -1,0 +1,290 @@
+html,body
+{
+    padding: 0;
+    margin: 0;
+    font-family: "open sans",sans-serif;
+}
+
+ul{
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+.number{
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0.36px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+}
+
+.page{
+    width: 375px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* 头部 */
+.head-background{
+    background-color: #3b37de;
+    border-radius: 0 0 0 35px;
+}
+
+.head{
+    padding: 36px 20px 20px 20px;
+    color: white;
+}
+
+
+.nav{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-button{
+    background: url("../Images/menu.png") no-repeat center center;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.profile{
+    align-items: center;
+}
+
+.profile-name{
+    margin-right: 16px;
+}
+
+.profile-image{
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+}
+
+.money{
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.total{
+    opacity: 0.6;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.lib-icon-money{
+    display: inline-block;
+    background: url("../Images/a.png") no-repeat center center;
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.money-number{
+    font-size: 26px;
+    margin-left: 4px;
+}
+
+.add-money{
+    width: 120px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.add-money::before{
+    content: "";
+    display: inline-block;
+    background: url("../Images/plus.png") no-repeat center center;
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    vertical-align: -1px;
+}
+
+.icon-types{
+    margin-top: 60px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.icon{
+    display: inline-block;
+    background-size: 25px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.btc-icon{
+    background-image: url("../Images/btc.png");
+}
+
+.xrp-icon{
+    background-image: url("../Images/xrp.png");
+}
+
+.lib-icon{
+    background-image: url("../Images/lib.png");
+}
+
+.ltc-icon{
+    background-image: url("../Images/ltc.png");
+}
+
+.xpm-icon{
+    background-image: url("../Images/xpm.png");
+}
+
+.icon-text{
+    font-weight: 600;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.active{
+    position: relative;
+}
+
+.active .icon-text{
+    color: #3b37de;
+    opacity: 1;
+    position: relative;
+}
+
+.active .lib-icon{
+    position: relative;
+    background: url("../Images/lib-blue.png") no-repeat center center;
+    background-size: 25px 25px;
+    opacity: 1;
+}
+
+.active::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 30px 18px;
+    left: -18px;
+    top: -24px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
+
+.active::after{
+    content: '';
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #3b37de;
+    border-radius: 50%;
+    margin: 6px auto -16px auto;
+}
+
+
+/* 简介 */
+.intro{
+    padding: 0 20px;
+}
+
+.title-2{
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.intro-content{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.18px;
+    line-height: 25px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.readmore{
+    background: url("../Images/tab.png") no-repeat center center;
+    background-size: 30px 30px;
+    width: 225px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+
+/* 交易 */
+.transactions{
+    padding: 0 20px;
+}
+
+.transfer{
+    margin-top: 14px;
+}
+
+.transaction-item{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.transaction-profile{
+    border-radius: 11px;
+    display: inline-block;
+}
+
+.transaction-info{
+    align-items: center;
+}
+
+.transfer-info{
+    margin-left: 14px;
+}
+
+.friend-name,.transaction-amount{
+    font-size: 18px;
+    color: rgba(34, 34, 34, 1);
+    line-height: 25px;
+    font-weight: 600;
+}
+
+.transactions-count{
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 25px;
+}
+
+
+.lib-icon-black{
+    background: url("../Images/lib.png") no-repeat center center;
+    background-size: 18px 15px;
+    width: 15px;
+    height: 13px;
+    margin-right: 6px;
+}
+
+.transaction-amount-container{
+    border: 1px solid rgba(222, 222, 222, 1);
+    border-radius: 8px;
+    width: 116px;
+    height: 41px;
+    align-items: center;
+    justify-content: center;
+}
